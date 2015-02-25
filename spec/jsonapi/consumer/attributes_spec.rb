@@ -23,7 +23,7 @@ RSpec.describe 'Attributes' do
       stub_request(:post, "http://localhost:3000/api/attr_records")
         .with(headers: {accept: 'application/json', content_type: "application/json"})
         .to_return(headers: {content_type: "application/json"}, status: 201, body: {
-          attr_records: [
+          data: [
             {
               type: :records,
               id: '1',
@@ -42,14 +42,14 @@ RSpec.describe 'Attributes' do
       stub_request(:get, "http://localhost:3000/api/attr_records/1")
         .with(headers: {accept: 'application/json'})
         .to_return(headers: {content_type: "application/json"}, body: {
-          attr_records: [
+          data: [
             {type: :records, id: '1', name: "foobar.example"}
           ]
         }.to_json)
       stub_request(:get, "http://localhost:3000/api/attr_records")
         .with(headers: {accept: 'application/json'})
         .to_return(headers: {content_type: "application/json"}, body: {
-          attr_records: [
+          data: [
             {type: :records, id: '1', name: "foo.example"},
             {type: :records, id: '2', name: "bar.example"},
             {type: :records, id: '3', name: "baz.example"}
