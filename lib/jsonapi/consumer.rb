@@ -27,6 +27,10 @@ require "jsonapi/consumer/parsers"
 require "jsonapi/consumer/parsers/beta"
 require "jsonapi/consumer/parsers/stable"
 
+require "jsonapi/consumer/serializers"
+require "jsonapi/consumer/serializers/beta"
+require "jsonapi/consumer/serializers/stable"
+
 require "jsonapi/consumer/query"
 require "jsonapi/consumer/query/base"
 require "jsonapi/consumer/query/create"
@@ -34,6 +38,10 @@ require "jsonapi/consumer/query/delete"
 require "jsonapi/consumer/query/find"
 require "jsonapi/consumer/query/new"
 require "jsonapi/consumer/query/update"
+
+require "jsonapi/consumer/query/profiles"
+require "jsonapi/consumer/query/profiles/beta"
+require "jsonapi/consumer/query/profiles/stable"
 
 require "jsonapi/consumer/resource/association_concern"
 require "jsonapi/consumer/resource/attributes_concern"

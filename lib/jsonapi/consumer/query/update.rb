@@ -4,7 +4,7 @@ module JSONAPI::Consumer::Query
 
     def build_params(args)
       args = args.dup
-      @params = {klass.json_key => args.except(klass.primary_key)}
+      @params = {json_key => args.except(klass.primary_key)}
     end
 
     def persisted?

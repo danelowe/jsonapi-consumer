@@ -3,7 +3,7 @@ module JSONAPI::Consumer::Query
     self.request_method = :post
 
     def build_params(args)
-      @params = {klass.json_key => args}
+      @params = {json_key => args}
     end
   end
 end

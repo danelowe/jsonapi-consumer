@@ -8,7 +8,7 @@ module JSONAPI::Consumer::Query
     end
 
     # def build_params(args)
-      # @params = {klass.json_key => args}
+      # @params = {json_key => args}
     # end
   end
 end

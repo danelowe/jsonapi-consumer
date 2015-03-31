@@ -34,7 +34,7 @@ RSpec.describe 'Serializer' do
 
   it 'establishes the proper `type` value' do
     expect(obj_hash).to have_key(:type)
-    expect(obj_hash[:type]).to eql(test_class.json_key)
+    expect(obj_hash[:type]).to eql(test_class.resource_name)
   end
 
   it 'outputs the associated has_many' do

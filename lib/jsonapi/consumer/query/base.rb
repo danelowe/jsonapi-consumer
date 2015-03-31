@@ -34,5 +34,13 @@ module JSONAPI::Consumer::Query
       "#{self.class.name}: method: #{request_method}; path: #{path}; params: #{params}, headers: #{headers}"
     end
 
+    def json_key
+      profile.json_key
+    end
+
+    def profile
+      @profile ||= Profiles::Beta.new(self)
+    end
+
   end
 end

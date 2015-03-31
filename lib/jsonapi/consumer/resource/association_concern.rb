@@ -113,7 +113,8 @@ module JSONAPI::Consumer::Resource
         association = self.send(name)
 
         if block_given?
-          block.call(name, association, options[:options])
+          klass = (class_name = _association_for(name).fetch(:class_name)) ? class_name.constantize : nil
+          block.call(name, association, options[:options].merge({class: klass, type: _association_type(name)}))
         end
       end
     end

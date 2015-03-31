@@ -58,7 +58,7 @@ module JSONAPI::Consumer::Parsers
     end
 
     def build
-      _body.fetch(klass.json_key, []).collect do |attrs|
+      _body.fetch(klass.resource_name, []).collect do |attrs|
         attrs_hash = attributes(attrs).merge(associations(attrs))
         klass.new(attrs_hash, false)
       end
